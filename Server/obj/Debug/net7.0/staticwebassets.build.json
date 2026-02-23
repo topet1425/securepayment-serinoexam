@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5EYw89a0eMmcVJjGo1vb9cgHs3mM23rnFrTRouIxuuc=",
+  "Hash": "HAWbM28qYCkP5yENWLqCkM1yMNOUQ+Ipb1XH3Dlput0=",
   "Source": "SecurePayment-SerinoExam.Server",
   "BasePath": "_content/SecurePayment-SerinoExam.Server",
   "Mode": "Default",
@@ -7116,23 +7116,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\topet\\source\\repos\\SecurePayment-SerinoExam\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Options.dll"
-    },
-    {
-      "Identity": "C:\\Users\\topet\\source\\repos\\SecurePayment-SerinoExam\\Client\\obj\\Debug\\net7.0\\scopedcss\\bundle\\SecurePayment-SerinoExam.Client.styles.css",
-      "SourceId": "SecurePayment-SerinoExam.Client",
-      "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\topet\\source\\repos\\SecurePayment-SerinoExam\\Client\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
-      "BasePath": "/",
-      "RelativePath": "SecurePayment-SerinoExam.Client.styles.css",
-      "AssetKind": "All",
-      "AssetMode": "CurrentProject",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "ScopedCss",
-      "AssetTraitValue": "ApplicationBundle",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\topet\\source\\repos\\SecurePayment-SerinoExam\\Client\\obj\\Debug\\net7.0\\scopedcss\\bundle\\SecurePayment-SerinoExam.Client.styles.css"
     },
     {
       "Identity": "C:\\Users\\topet\\source\\repos\\SecurePayment-SerinoExam\\Client\\wwwroot\\css\\app.css",

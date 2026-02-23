@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.AspNetCore.Authentication;
 using SecurePayment.Server.Auth;
 

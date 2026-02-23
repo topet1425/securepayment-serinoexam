@@ -841,9 +841,7 @@ C:\Users\topet\source\repos\SecurePayment-SerinoExam\Client\obj\Debug\net7.0\sta
 C:\Users\topet\source\repos\SecurePayment-SerinoExam\Client\obj\Debug\net7.0\staticwebassets.pack.json
 C:\Users\topet\source\repos\SecurePayment-SerinoExam\Client\obj\Debug\net7.0\staticwebassets.build.json
 C:\Users\topet\source\repos\SecurePayment-SerinoExam\Client\obj\Debug\net7.0\staticwebassets.development.json
-C:\Users\topet\source\repos\SecurePayment-SerinoExam\Client\obj\Debug\net7.0\scopedcss\Pages\Payments.razor.rz.scp.css
 C:\Users\topet\source\repos\SecurePayment-SerinoExam\Client\obj\Debug\net7.0\scopedcss\bundle\SecurePayment-SerinoExam.Client.styles.css
-C:\Users\topet\source\repos\SecurePayment-SerinoExam\Client\obj\Debug\net7.0\scopedcss\projectbundle\SecurePayment-SerinoExam.Client.bundle.scp.css
 C:\Users\topet\source\repos\SecurePayment-SerinoExam\Client\obj\Debug\net7.0\SecurePayment-SerinoExam.Client.csproj.CopyComplete
 C:\Users\topet\source\repos\SecurePayment-SerinoExam\Client\obj\Debug\net7.0\SecurePayment-SerinoExam.Client.dll
 C:\Users\topet\source\repos\SecurePayment-SerinoExam\Client\obj\Debug\net7.0\refint\SecurePayment-SerinoExam.Client.dll

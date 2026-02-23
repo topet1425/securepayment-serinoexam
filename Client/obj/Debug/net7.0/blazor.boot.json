@@ -203,14 +203,14 @@
       "netstandard.dll": "sha256-+zXQN9625IUa11YLU5hNoQ04oHjCwFIJAXc8vOEMniU=",
       "System.Private.CoreLib.dll": "sha256-oytzvvuRkpVGZxuLwt9SR8n1KJzGeYroKTHxk0oZvfI=",
       "SecurePayment-SerinoExam.Shared.dll": "sha256-mU4S4g1VUZUwnhV4vcJfOLnbdK8Ubv7SAwlc5\/mj3tI=",
-      "SecurePayment-SerinoExam.Client.dll": "sha256-0gF8U0JT4kz4tUMhhgA0gTFaE6pHwLcBWzx8Gp\/3TWw="
+      "SecurePayment-SerinoExam.Client.dll": "sha256-GbcFuaxs7c\/kKK7souWQHJ2l1gOqt0u6xN0hIDXTRks="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
       "SecurePayment-SerinoExam.Shared.pdb": "sha256-++aCzhIaByOxp1eVVcZVm2+geDyJZZq4GuSX7R5nKyA=",
-      "SecurePayment-SerinoExam.Client.pdb": "sha256-VwoPQl0wVh5B6b89QlhmJg5A65kzZ7HAeK+dIs81wsk="
+      "SecurePayment-SerinoExam.Client.pdb": "sha256-w2sazXgMM4DTrFr\/2Yv9BsEvkKtdnh1\/OB5g\/jI2iIo="
     },
     "runtime": {
       "dotnet.7.0.13.matufbdteb.js": "sha256-eRbsSkKiWKWKcMiqy13LuLSBIpzmn52qw\/6SX+1jNQ0=",

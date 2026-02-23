@@ -31,6 +31,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/topet/source/repos/SecurePayment-SerinoExam/Client/Pages/Payments.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGF5bWVudHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/topet/source/repos/SecurePayment-SerinoExam/Client/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -38,7 +42,3 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/topet/source/repos/SecurePayment-SerinoExam/Client/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/topet/source/repos/SecurePayment-SerinoExam/Client/Pages/Payments.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGF5bWVudHMucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-ivfkt3y4tz

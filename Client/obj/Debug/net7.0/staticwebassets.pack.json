@@ -9,10 +9,6 @@
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
     },
     {
-      "Id": "C:\\Users\\topet\\source\\repos\\SecurePayment-SerinoExam\\Client\\obj\\Debug\\net7.0\\scopedcss\\bundle\\SecurePayment-SerinoExam.Client.styles.css",
-      "PackagePath": "staticwebassets\\SecurePayment-SerinoExam.Client.styles.css"
-    },
-    {
       "Id": "C:\\Users\\topet\\source\\repos\\SecurePayment-SerinoExam\\Client\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },

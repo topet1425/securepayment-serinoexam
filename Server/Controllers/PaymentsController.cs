@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SecurePayment.Shared.Models;
-using SecurePayment.Server.Auth;
 
 namespace SecurePayment.Server.Controllers
 {
@@ -14,7 +13,7 @@ namespace SecurePayment.Server.Controllers
         public async Task<ActionResult<PaymentResponse>> Create([FromBody] PaymentRequest request)
         {
             // helps show loading state in UI
-            await Task.Delay(500);
+            await Task.Delay(1000);
 
             // optional: simulate server error
             if (request.ReferenceId.StartsWith("500", StringComparison.OrdinalIgnoreCase))
