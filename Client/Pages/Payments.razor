@@ -1,0 +1,169 @@
+﻿@page "/payments"
+@using Microsoft.AspNetCore.Components.Forms
+@using SecurePayment.Shared.Models;
+@using SecurePayment.Client.Services
+@using SecurePayment.Client.Services.Auth
+
+@inject PaymentsApiClient Api
+@inject ITokenProvider TokenProvider
+
+<MudText Typo="Typo.h4" Class="mb-4">Payments</MudText>
+
+<MudGrid Spacing="1">
+    <MudItem xs="12" md="12">
+        <MudPaper Elevation="1" Class="pa-4">
+            <MudText Typo="Typo.h6" Class="mb-3">Create payment</MudText>
+
+            <MudStack Spacing="2">
+                <MudSelect T="string"
+                           Label="Demo token"
+                           Disabled="@IsSubmitting"
+                           Value="@SelectedToken"
+                           ValueChanged="OnTokenChanged">
+                    
+                    <MudSelectItem Value="@("valid-token")">valid-token (200)</MudSelectItem>
+                    <MudSelectItem Value="@("expired-token")">expired-token (401)</MudSelectItem>
+                    <MudSelectItem Value="@("no-permission-token")">no-permission-token (403)</MudSelectItem>
+                    
+                </MudSelect>
+
+                <MudAlert Severity="Severity.Info" Variant="Variant.Outlined">
+                    Switch tokens to demo 401/403. ReferenceId starting with <b>500</b> simulates server error.
+                </MudAlert>
+
+                <EditForm Model="@Model" OnValidSubmit="@SubmitAsync">
+                    <DataAnnotationsValidator />
+
+                    <MudGrid Spacing="2">
+                        <MudItem xs="12" sm="6">
+                            <MudNumericField T="decimal"
+                                             Label="Amount"
+                                             Variant="Variant.Outlined"
+                                             Disabled="@IsSubmitting"
+                                             @bind-Value="Model.Amount"
+                                             Min="0.01m"
+                                             Immediate="true" />
+                            <ValidationMessage For="@(() => Model.Amount)" />
+                        </MudItem>
+
+                        <MudItem xs="12" sm="6">
+                            <MudSelect T="string"
+                                       Label="Currency"
+                                       Variant="Variant.Outlined"
+                                       Disabled="@IsSubmitting"
+                                       @bind-Value="Model.Currency">
+                                       
+                                <MudSelectItem Value="@("PHP")">PHP</MudSelectItem>
+                                <MudSelectItem Value="@("USD")">USD</MudSelectItem>
+                                <MudSelectItem Value="@("AUD")">AUD</MudSelectItem>
+                                
+                            </MudSelect>
+                            <ValidationMessage For="@(() => Model.Currency)" />
+                        </MudItem>
+
+                        <MudItem xs="12">
+                            <MudTextField Label="Reference ID"
+                                          Variant="Variant.Outlined"
+                                          Disabled="@IsSubmitting"
+                                          @bind-Value="Model.ReferenceId"
+                                          Immediate="true" />
+                            <ValidationMessage For="@(() => Model.ReferenceId)" />
+                        </MudItem>
+
+                        <MudItem xs="12">
+                            <MudStack Direction="Row" Spacing="2" AlignItems="AlignItems.Center">
+                                <MudButton Variant="Variant.Filled"
+                                           Color="Color.Primary"
+                                           Disabled="@IsSubmitting"
+                                           ButtonType="ButtonType.Submit">
+                                    Submit payment
+                                </MudButton>
+
+                                @if (IsSubmitting)
+                                {
+                                    <MudProgressCircular Indeterminate="true" Size="Size.Small" />
+                                }
+                            </MudStack>
+                        </MudItem>
+                    </MudGrid>
+                </EditForm>
+
+                @if (Banner is not null)
+                {
+                    <MudAlert Severity="@Banner.Severity" Variant="Variant.Outlined">
+                        <MudText Typo="Typo.subtitle2">@Banner.Title</MudText>
+                        <MudText Typo="Typo.body2">@Banner.Detail</MudText>
+                    </MudAlert>
+                }
+            </MudStack>
+
+            <MudOverlay Visible="@IsSubmitting" DarkBackground="true" AutoClose="false">
+                <MudPaper Class="pa-4">
+                    <MudStack Spacing="2" AlignItems="AlignItems.Center">
+                        <MudProgressCircular Indeterminate="true" />
+                        <MudText Typo="Typo.body1">Submitting payment…</MudText>
+                    </MudStack>
+                </MudPaper>
+            </MudOverlay>
+        </MudPaper>
+    </MudItem>
+</MudGrid>
+
+@code {
+
+    private PaymentRequest Model { get; set; } = new() { Currency = "PHP" };
+    private bool IsSubmitting { get; set; }
+    private string SelectedToken { get; set; } = "valid-token";
+    private BannerModel? Banner { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await TokenProvider.SetTokenAsync(SelectedToken);
+    }
+
+    private async Task OnTokenChanged(string token)
+    {
+        SelectedToken = token;
+        await TokenProvider.SetTokenAsync(token);
+        Banner = new BannerModel(Severity.Info, "Token set", $"Current token: {token}");
+    }
+
+    private async Task SubmitAsync()
+    {
+        Banner = null;
+        IsSubmitting = true;
+
+        try
+        {
+            var result = await Api.SubmitAsync(Model);
+
+            Banner = new BannerModel(
+                Severity.Success,
+                "Payment submitted",
+                $"PaymentId: {result.PaymentId} • Reference: {result.ReferenceId} • Status: {result.Status}"
+            );
+        }
+        catch (UnauthorizedAccessException)
+        {
+            Banner = new BannerModel(Severity.Warning, "Session expired", "Please sign in again (401).");
+        }
+        catch (InvalidOperationException ex) when (ex.Message.Contains("Forbidden"))
+        {
+            Banner = new BannerModel(Severity.Warning, "Not allowed", "You don’t have permission (403).");
+        }
+        catch (HttpRequestException)
+        {
+            Banner = new BannerModel(Severity.Error, "Request failed", "Network/server error. Please try again.");
+        }
+        catch
+        {
+            Banner = new BannerModel(Severity.Error, "Unexpected error", "Something went wrong. Please try again.");
+        }
+        finally
+        {
+            IsSubmitting = false;
+        }
+    }
+
+    private record BannerModel(Severity Severity, string Title, string Detail);
+}

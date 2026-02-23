@@ -1,0 +1,11 @@
+C:\Users\topet\source\repos\SecurePayment-SerinoExam\Shared\bin\Debug\net7.0\SecurePayment-SerinoExam.Shared.deps.json
+C:\Users\topet\source\repos\SecurePayment-SerinoExam\Shared\bin\Debug\net7.0\SecurePayment-SerinoExam.Shared.dll
+C:\Users\topet\source\repos\SecurePayment-SerinoExam\Shared\bin\Debug\net7.0\SecurePayment-SerinoExam.Shared.pdb
+C:\Users\topet\source\repos\SecurePayment-SerinoExam\Shared\obj\Debug\net7.0\SecurePayment-SerinoExam.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\topet\source\repos\SecurePayment-SerinoExam\Shared\obj\Debug\net7.0\SecurePayment-SerinoExam.Shared.AssemblyInfoInputs.cache
+C:\Users\topet\source\repos\SecurePayment-SerinoExam\Shared\obj\Debug\net7.0\SecurePayment-SerinoExam.Shared.AssemblyInfo.cs
+C:\Users\topet\source\repos\SecurePayment-SerinoExam\Shared\obj\Debug\net7.0\SecurePayment-SerinoExam.Shared.csproj.CoreCompileInputs.cache
+C:\Users\topet\source\repos\SecurePayment-SerinoExam\Shared\obj\Debug\net7.0\SecurePayment-SerinoExam.Shared.dll
+C:\Users\topet\source\repos\SecurePayment-SerinoExam\Shared\obj\Debug\net7.0\refint\SecurePayment-SerinoExam.Shared.dll
+C:\Users\topet\source\repos\SecurePayment-SerinoExam\Shared\obj\Debug\net7.0\SecurePayment-SerinoExam.Shared.pdb
+C:\Users\topet\source\repos\SecurePayment-SerinoExam\Shared\obj\Debug\net7.0\ref\SecurePayment-SerinoExam.Shared.dll
